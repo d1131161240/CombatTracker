@@ -1,6 +1,6 @@
 ## Interface: 90105
 ## Title: CombatTracker
-## Description: Tracks incoming DPS, and how long you spend in combat
+## Notes: Tracks incoming DPS, and how long you spend in combat
 
 CombatTracker.lua
 CombatTracker.xml

@@ -1,15 +1,16 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.blizzard.com/wow/ui/
-..\FrameXML\UI.xsd">
-    <Button name="CombatTrackerFrame" parent="UIParent" enableMouse="true" movable="true" frameStrata="LOW">
+xsi:schemaLocation="http://www.blizzard.com/wow/ui/FrameXML/UI.xsd">
+    <Button name="CombatTrackerFrame" parent="UIParent" enableMouse="true"
+            movable="true" frameStrata="LOW">
         <Size x="175" y="40"/>
         <Anchors>
             <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="Minimap">
                 <Offset x="0" y="-10"/>
             </Anchor>
         </Anchors>
-        <Backdrop bgFile="InterFace\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" title="true">
+        <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+                  edgeFile="Interface\DialogFrame\UI-DialogBox-Border" title="true">
             <BackgroundInsets>
                 <AbsInset left="11" right="12" top="12" bottom="11"/>
             </BackgroundInsets>
@@ -22,7 +23,8 @@ xsi:schemaLocation="http://www.blizzard.com/wow/ui/
         </Backdrop>
         <Layers>
             <Layer level="OVERLAY">
-                <FontString name="$parentText" inherits="GameFontNormalSmall" justifyH="CENTER" setAllPoint="true" text="CombatTracker"/>
+                <FontString name="$parentText" inherits="GameFontNormalSmall"
+                            justifyH="CENTER" setAllPoint="true" text="CombatTracker"/>
             </Layer>
         </Layers>
         <Scripts>
@@ -30,7 +32,7 @@ xsi:schemaLocation="http://www.blizzard.com/wow/ui/
                 CombatTracker_OnLoad(self)
             </OnLoad>
             <OnEvent>
-                CombatTracker_OnEvent(Self, event, ...)
+                CombatTracker_OnEvent(self, event, ...)
             </OnEvent>
             <OnClick>
                 CombatTracker_ReportDPS()
@@ -39,7 +41,7 @@ xsi:schemaLocation="http://www.blizzard.com/wow/ui/
                 self:StartMoving()
             </OnDragStart>
             <OnDragStop>
-                selfLStopMovingOrSizing()
+                self:StopMovingOrSizing()
             </OnDragStop>
         </Scripts>
     </Button>
